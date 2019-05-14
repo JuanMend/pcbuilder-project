@@ -11,7 +11,7 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 const cors = require('cors');
 const app = express();
 const bcrypt = require('bcryptjs');
-// const path = require('path'); // Usually moved to the start of file
+const path = require('path'); // Usually moved to the start of file
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
 const { register, login, logout, getUser } = require('./controller/authController');
@@ -161,6 +161,10 @@ app.post('/test-upload', (request, response) => {
 			return response.status(400).send(error);
 		}
 	});
+});
+
+app.get('*', (req, res) => {
+	res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
 app.listen(SERVER_PORT, () => {
