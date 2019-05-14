@@ -1,0 +1,157 @@
+@import '../../Variable.scss';
+
+.completedForm {
+	// display: flex;
+	// flex-direction: row;
+	// flex-wrap: wrap;
+	// justify-content: space-around;
+	// align-items: center;
+	// align-content: space-around;
+	// margin-top: 40px;
+	// border-bottom: solid 1px white;
+}
+
+.completedPcBtn {
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 14px;
+	background: blue;
+	border: 1px solid transparent;
+	color: white;
+}
+
+.completedPcBtn:hover {
+	background: rgb(0, 28, 211);
+}
+
+.buildsMain {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: space-around;
+	margin-top: 40px;
+	border-bottom: solid 1px rgb(121, 120, 120);
+}
+
+// .pcCompleted {
+// 	display: flex;
+// 	flex-direction: column;
+// 	flex-wrap: nowrap;
+// 	justify-content: center;
+// 	align-items: stretch;
+// 	align-content: stretch;
+// 	border: 2px solid blue;
+// }
+.mappedForm {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+	border: 2px solid rgb(228, 227, 227);
+	height: 30vh;
+	width: 16vw;
+	margin-bottom: 20px;
+}
+.mappedForm:hover {
+	border: 3px solid rgba(48, 8, 141, 0.904);
+}
+
+.postContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	align-content: stretch;
+	// border: red solid 2px;
+	margin-top: 3vh;
+}
+
+.completedImage {
+	width: 15vw;
+	height: 16vh;
+	// border: 2px solid yellow;
+	margin-bottom: 7px;
+}
+
+.descriptionForm {
+	height: 10vh;
+	width: 15vw;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+	h3 {
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+		word-wrap: break-word;
+		display: flex;
+		align-content: flex-start;
+	}
+}
+
+.completedPriceForm {
+	border-top: 2px solid gray;
+	width: 15vw;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+@media (max-width: 414px) {
+	.mappedForm {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		border: 2px solid rgb(228, 227, 227);
+		height: 31vh;
+		width: 45vw;
+		margin-bottom: 20px;
+	}
+	.mappedForm:hover {
+		border: 3px solid rgba(48, 8, 141, 0.904);
+	}
+
+	.postContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-content: stretch;
+		// border: red solid 2px;
+		margin-top: 3vh;
+	}
+
+	.completedImage {
+		width: 43vw;
+		height: 16vh;
+		// border: 2px solid yellow;
+		margin-bottom: 7px;
+	}
+
+	.descriptionForm {
+		// border: 2px solid green;
+		height: 10vh;
+		width: 44vw;
+	}
+
+	.completedPriceForm {
+		border-top: 2px solid gray;
+		width: 44vw;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+}

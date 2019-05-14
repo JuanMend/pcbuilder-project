@@ -1,0 +1,28 @@
+.positionVideos {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: flex-start;
+}
+.frame {
+	margin-top: 10px;
+}
+
+@media (max-width: 414px) {
+	.positionVideos {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: stretch;
+		align-content: flex-start;
+		width: 100%;
+	}
+	iframe {
+		width: 100vw;
+	}
+}

@@ -1,0 +1,1 @@
+SELECT * FROM mother_board;

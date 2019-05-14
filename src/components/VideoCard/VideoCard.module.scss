@@ -1,0 +1,108 @@
+@import '../../Variable.scss';
+
+.allCpuParts {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: flex-start;
+	margin-top: 40px;
+}
+
+.videoCardForm {
+	-webkit-box-shadow: 9px 4px 6px 2px rgba(161, 161, 161, 0.75);
+	-moz-box-shadow: 9px 4px 6px 2px rgba(161, 161, 161, 0.75);
+	box-shadow: 9px 4px 6px 2px rgba(161, 161, 161, 0.75);
+	margin-top: 23px;
+	height: 30vh;
+}
+.videoCardForm:hover {
+	transform: scale(1.04);
+}
+
+.pcImage {
+	width: 210px;
+	height: 160px;
+}
+
+.addShopping {
+	border-left: 2px solid rgb(196, 196, 194);
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height: 10vh;
+	width: 7vw;
+	cursor: pointer;
+}
+.addShopping:hover {
+	background: rgb(123, 184, 224);
+}
+
+.productInfo {
+	width: 8vw;
+	font-size: 14px;
+	justify-content: space-around;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 10vh;
+}
+.right {
+	justify-content: flex-end;
+	align-items: center;
+	display: flex;
+}
+.info {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	background: white;
+	border-top: 2px solid rgb(196, 196, 194);
+}
+
+@media (max-width: 414px) {
+	.allCpuParts {
+		height: 160vh;
+	}
+	.videoCardForm {
+		border: 2px solid rgb(226, 226, 226);
+		margin-bottom: 20px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		border-radius: 5px;
+	}
+	.info {
+		border-top: 2px solid rgb(223, 223, 220);
+		height: 13vh;
+		justify-content: space-between;
+		align-items: flex-end;
+		display: flex;
+	}
+
+	.productInfo {
+		width: 38vw;
+		height: 12vh;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		align-content: space-around;
+	}
+	.right {
+		justify-content: flex-end;
+		align-items: center;
+		display: flex;
+	}
+	.addShopping {
+		border-left: 2px solid rgb(223, 223, 220);
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		height: 12vh;
+		width: 24vw;
+	}
+}

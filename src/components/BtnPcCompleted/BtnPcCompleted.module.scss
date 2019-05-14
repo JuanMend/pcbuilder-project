@@ -1,0 +1,235 @@
+.descForm {
+	// border: 2px solid blue;
+	height: 90vh;
+	justify-content: flex-start;
+	align-items: center;
+	display: flex;
+}
+
+.desktopForm {
+	border-right: 2px solid rgb(172, 170, 170);
+	// border: 2px solid red;
+	width: 30vw;
+	height: 90vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.uploadImg {
+	width: 50vw;
+	height: 45vh;
+	border-radius: 5px;
+}
+
+.uploadForm {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-end;
+	align-content: stretch;
+	border: 2px solid rgb(94, 94, 94);
+	width: 50vw;
+	height: 45vh;
+	margin-left: 10vw;
+	border-radius: 5px;
+}
+.description {
+	border-right: 2px solid rgb(149, 149, 149);
+	width: 25vw;
+	height: 19vh;
+	color: black;
+}
+
+.price {
+	// border: 2px solid red;
+	font-size: 20px;
+	color: black;
+	margin-left: 10px;
+}
+.postFormBtn {
+	border-left: 2px solid rgb(149, 149, 149);
+	height: 30vh;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	width: 100px;
+	margin-left: 50px;
+}
+
+.post {
+	height: 40px;
+	width: 120px;
+	font-size: 20px;
+	outline: none;
+	border: none;
+	background: blue;
+	border-radius: 5px;
+	color: white;
+	margin-right: 5px;
+	margin-top: 5px;
+}
+
+.post:hover {
+	background: rgb(25, 25, 189);
+	// color: white;
+}
+span {
+	font-size: 30px;
+	color: black;
+}
+
+.priceInput {
+	width: 180px;
+	height: 30px;
+	margin-bottom: 30px;
+}
+
+.infoForm {
+	// border: 2px solid yellow;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	height: 35vh;
+	flex-direction: column;
+	width: 28vw;
+	margin-top: 20px;
+}
+
+.saveBtn {
+	width: 180px;
+	height: 40px;
+	border: 2px solid transparent;
+	border-radius: 5px;
+	background: blue;
+	color: white;
+}
+
+.saveBtn:hover {
+	background: rgb(25, 25, 189);
+}
+
+.textAreaInput {
+	width: 14vw;
+	height: 20vh;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+.uploadBtn {
+	width: 90px;
+	height: 21px;
+}
+
+@media (max-width: 414px) {
+	.uploadForm {
+		width: 79vw;
+		// border: 2px solid rgb(204, 203, 203);
+		border: 2px solid rgb(231, 228, 228);
+		height: 33vh;
+		justify-content: flex-start;
+		align-items: center;
+		display: flex;
+		margin-top: 20px;
+		margin-right: 35px;
+		flex-direction: column;
+	}
+	.description {
+		width: 76vw;
+		font-size: 14px;
+		text-align: center;
+		border: none;
+		// border: 1px solid green;
+	}
+	.descForm {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: 140vh;
+	}
+	.uploadImg {
+		width: 78vw;
+		height: 32vh;
+		// border: 2px solid yellow;
+	}
+	.priceInput {
+		width: 100px;
+		height: 20px;
+	}
+	.price {
+		width: 20vw;
+		height: 20px;
+		font-size: 15px;
+	}
+
+	.post {
+		width: 70px;
+		height: 30px;
+		font-size: 18px;
+	}
+	.post:hover {
+		background: rgb(42, 42, 223);
+	}
+	.saveBtn {
+		width: 110px;
+	}
+	.desktopForm {
+		// border: 2px solid yellow;
+		border-radius: 5px;
+		width: 90vw;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		height: 60vh;
+		margin-top: 10px;
+		background: rgb(240, 240, 240);
+	}
+	.textAreaInput {
+		width: 30vw;
+		height: 8vh;
+		border: 1px solid gray;
+	}
+	.fileForm {
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		// border: 2px solid green;
+		width: 80vw;
+		height: 30vh;
+		// flex-direction: column;
+	}
+	.typeFile {
+		// border: 2px solid blue;
+		// justify-content: center;
+		// align-items: center;
+		// display: flex;
+		height: 5vh;
+		width: 55vw;
+		// flex-direction: column;
+		margin-left: 60px;
+	}
+	.uploadBtn {
+		background: blue;
+		color: white;
+		border-radius: 5px;
+		height: 4vh;
+		border: 2px solid green;
+	}
+	.priceInput {
+		border: 1px solid gray;
+	}
+	.uploadPhotos {
+		font-size: 17px;
+		line-height: 40px;
+	}
+}
+
+// @media (max-width: 400px){
+//     .uploadForm{
+
+//     }
+// }

@@ -1,0 +1,147 @@
+@import '../../Variable.scss';
+
+.homeMain {
+	// border: 2px solid red;
+	height: 204vh;
+	background: #000000;
+}
+
+.imageMain {
+	background-image: url('https://www.asus.com/websites/global/products/kQG1OgjwfAo3g7vj/img/kv/kv.jpg');
+	// border: 2px solid pink;
+	height: 70vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	// border: 2px solid blue;
+	.paragraph {
+		font-size: 20px;
+		color: white;
+		// border: 2px solid red;
+		width: 30vw;
+		margin-left: 20vw;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		letter-spacing: normal;
+		height: 40vh;
+		line-height: 29px;
+		font-weight: 550;
+	}
+
+	.paragraph:hover {
+		color: rgb(233, 28, 55);
+	}
+}
+.buildingBtn {
+	width: 210px;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	background: red;
+	color: white;
+	font-size: 18px;
+	outline: none;
+}
+
+.buildingBtn:hover {
+	background: rgb(128, 6, 6);
+}
+
+.pcInfo {
+	justify-content: baseline;
+	align-items: flex-start;
+	display: flex;
+	margin-top: 10px;
+	flex-direction: column;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 60vh;
+	// border: 2px solid green;
+	background-image: url('https://www.asus.com/Microsite/No1-Gaming-Monitor-Brand/pl/images/wallpaper/PG279_PG27A_wallpaper_3840x2160.jpg');
+}
+
+.monitorsBtn {
+	background: #8f09ce;
+	width: 210px;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	color: white;
+	font-size: 20px;
+	margin-top: 15vh;
+	margin-bottom: 2vh;
+	outline: none;
+}
+.monitorsBtn:hover {
+	background: #6e2b8e;
+}
+
+.positionMonitor {
+	// border: 2px solid yellow;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	height: 49vh;
+	width: 62vw;
+}
+
+.videosMain {
+	margin-top: 10px;
+	background-image: url('https://cdn.greatdeals.com.sg/wp-content/uploads/2019/03/15161232/Razer-BlackWidow-Kraken-Basilisk-Essential-affordable-gaming-gear-628x320.png');
+	// border: 2px solid pink;
+	height: 70vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+.videosBtn {
+	width: 190px;
+	height: 55px;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	background: rgb(6, 214, 23);
+	color: white;
+	font-size: 25px;
+	outline: none;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+		'Helvetica Neue', sans-serif;
+}
+
+.videosBtn:hover {
+	background: rgb(5, 134, 5);
+}
+
+@media (max-width: 414px) {
+	.paragraph {
+		// font-size: 5px;
+		// border: 2px solid yellow;
+		// color: blue;
+		// width: 30vw;
+		// height: 10vh;
+		display: none;
+	}
+	.buildingBtn {
+		width: 180px;
+	}
+	.positionMonitor {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.pcInfo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.monitorsBtn {
+		margin: 0;
+	}
+}
