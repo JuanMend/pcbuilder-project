@@ -41,6 +41,10 @@ class Cart extends Component {
 					<img className={styles.pcImage} src={val.image} />
 					<div className={styles.info}>
 						<div className={styles.productInfo}>
+							<h3>{val.power_supply}</h3>
+							<h3>{val.storage}</h3>
+							<h3>{val.video_card}</h3>
+							<h3>{val.case}</h3>
 							<h3> {val.cpu_cooler}</h3>
 							<h3> {val.cpu}</h3>
 							<h3> {val.motherboard}</h3>
@@ -51,6 +55,10 @@ class Cart extends Component {
 							<h3> {val.cores}</h3>
 							<h3> {val.fan_rpm}</h3>
 							<h3> {val.socket_cpu}</h3>
+							<h3>{val.type}</h3>
+							<h3>{val.capacity}</h3>
+							<h3>{val.memory_size}</h3>
+							<h3>{val.form_factor}</h3>
 							<h3> {val.speed}</h3>
 							<h4>${val.price}.00</h4>
 						</div>

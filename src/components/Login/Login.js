@@ -24,7 +24,14 @@ class Login extends Component {
 
 	handleLogin = () => {
 		const { username, password, image } = this.state;
-		this.props.updateLogin(username, password, image);
+		this.props
+			.updateLogin(username, password, image)
+			.then((res) => {
+				toast.success(`Welcome: ${this.props.reducer.username}`);
+			})
+			.catch((err) => {
+				toast.error('Wrong Username or Password');
+			});
 		// const { username, password } = this.state;
 		// axios
 		// 	.post('/auth/login', { username, password })
@@ -63,6 +70,7 @@ class Login extends Component {
 						<input
 							className={styles.loginPassword}
 							name="password"
+							type="password"
 							onChange={this.handlerChange}
 							placeholder="Password"
 						/>

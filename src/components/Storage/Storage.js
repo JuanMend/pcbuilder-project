@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { storagePart } from '../../redux/pcParts';
+import { storagePart, addCart } from '../../redux/pcParts';
 import { connect } from 'react-redux';
 import { getUser } from '../../redux/reducer';
 import styles from './Storage.module.scss';
@@ -24,7 +24,9 @@ class Storage extends Component {
 						</div>
 						<div className={styles.right}>
 							<div className={styles.addShopping}>
-								<i class="material-icons">add_shopping_cart</i>
+								<i onClick={() => this.props.addCart(val)} class="material-icons">
+									add_shopping_cart
+								</i>
 							</div>
 						</div>
 					</div>
@@ -40,4 +42,4 @@ const mapStateToProps = (state) => {
 		storage: state.users.storage
 	};
 };
-export default connect(mapStateToProps, { getUser, storagePart })(Storage);
+export default connect(mapStateToProps, { getUser, storagePart, addCart })(Storage);

@@ -110,17 +110,17 @@
 		align-content: space-around;
 	}
 	.right {
-		justify-content: flex-end;
-		align-items: center;
-		display: flex;
-		border-left: 2px solid rgb(223, 223, 220);
-	}
-	.buttons {
 		justify-content: center;
 		align-items: center;
 		display: flex;
-		height: 40vh;
-		width: 24vw;
-		border: 2px solid green;
+		border-left: 2px solid rgb(223, 223, 220);
+		height: 13vh;
+	}
+	.buttons {
+		justify-content: flex-end;
+		align-items: center;
+		display: flex;
+		height: 5vh;
+		width: 67vw;
 	}
 }

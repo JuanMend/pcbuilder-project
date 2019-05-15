@@ -70,6 +70,7 @@
 	align-content: stretch;
 	// border: red solid 2px;
 	margin-top: 3vh;
+	font-size: 14px;
 }
 
 .completedImage {
@@ -127,15 +128,64 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: flex-start;
 		align-content: stretch;
-		// border: red solid 2px;
-		margin-top: 3vh;
+		font-size: 10px;
 	}
 
 	.completedImage {
 		width: 43vw;
+		height: 16vh;
+		margin-bottom: 7px;
+	}
+
+	.descriptionForm {
+		height: 10vh;
+		width: 44vw;
+	}
+
+	.completedPriceForm {
+		border-top: 2px solid gray;
+		width: 44vw;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+}
+
+// -------Iphone 6/7/8 Normal Size----------
+
+@media (max-width: 414px) {
+	.mappedForm {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: stretch;
+		border: 2px solid rgb(228, 227, 227);
+		height: 31vh;
+		width: 45vw;
+		margin-bottom: 20px;
+	}
+	.mappedForm:hover {
+		border: 3px solid rgba(48, 8, 141, 0.904);
+	}
+
+	.postContainer {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: flex-start;
+		align-content: stretch;
+		font-size: 9px;
+		// margin-top: 3vh;
+	}
+
+	.completedImage {
+		width: 42vw;
 		height: 16vh;
 		// border: 2px solid yellow;
 		margin-bottom: 7px;

@@ -20,7 +20,7 @@ class Monitor extends Component {
 						<div className={styles.productInfo}>
 							<h3>{val.monitor}</h3>
 							<h3>Resolution: {val.resolution}</h3>
-							<h3>Size: {val.size}</h3>
+							<h3>Size: {val.size}"</h3>
 							<h4>${val.price}.00</h4>
 						</div>
 						<div className={styles.right}>

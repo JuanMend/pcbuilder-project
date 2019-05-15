@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { videoCardPart } from '../../redux/pcParts';
+import { videoCardPart, addCart } from '../../redux/pcParts';
 import { connect } from 'react-redux';
 import { getUser } from '../../redux/reducer';
 import styles from './VideoCard.module.scss';
@@ -24,7 +24,9 @@ class VideoCard extends Component {
 						</div>
 						<div className={styles.right}>
 							<div className={styles.addShopping}>
-								<i class="material-icons">add_shopping_cart</i>
+								<i onClick={() => this.props.addCart(val)} class="material-icons">
+									add_shopping_cart
+								</i>
 							</div>
 						</div>
 					</div>
@@ -40,4 +42,4 @@ const mapStateToProps = (state) => {
 		videoCard: state.users.videoCard
 	};
 };
-export default connect(mapStateToProps, { getUser, videoCardPart })(VideoCard);
+export default connect(mapStateToProps, { getUser, videoCardPart, addCart })(VideoCard);

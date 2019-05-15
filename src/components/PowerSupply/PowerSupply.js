@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { powerSupplyPart } from '../../redux/pcParts';
+import { powerSupplyPart, addCart } from '../../redux/pcParts';
 import { connect } from 'react-redux';
 import { getUser } from '../../redux/reducer';
 import styles from './PowerSupply.module.scss';
@@ -19,12 +19,14 @@ class PowerSupply extends Component {
 					<div className={styles.info}>
 						<div className={styles.productInfo}>
 							<h3>{val.power_supply}</h3>
-							<h3>Form Factor: {val.Form_Factor}</h3>
+							<h3>Form Factor: {val.form_factor}</h3>
 							<h4>${val.price}.00</h4>
 						</div>
 						<div className={styles.right}>
 							<div className={styles.addShopping}>
-								<i class="material-icons">add_shopping_cart</i>
+								<i onClick={() => this.props.addCart(val)} class="material-icons">
+									add_shopping_cart
+								</i>
 							</div>
 						</div>
 					</div>
@@ -40,4 +42,4 @@ const mapStateToProps = (state) => {
 		powerSupply: state.users.powerSupply
 	};
 };
-export default connect(mapStateToProps, { getUser, powerSupplyPart })(PowerSupply);
+export default connect(mapStateToProps, { getUser, powerSupplyPart, addCart })(PowerSupply);

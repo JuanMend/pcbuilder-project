@@ -1,4 +1,5 @@
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 const initialState = {
 	username: '',
@@ -57,11 +58,11 @@ export function updateLogin(username, password, image) {
 	return {
 		type: LOGIN,
 		payload: axios.post('/auth/login', { username, password, image })
-		// .then((res) => res.data)
-		// // toast.success('Your Login')
-
+		// .then((res) => {
+		// 	toast.success('Welcome');
+		// })
 		// .catch((err) => {
-		// 	toast.error('Username or Password Incorrect');
+		// 	toast.error('Wrong Username or Password');
 		// })
 	};
 }
@@ -80,11 +81,11 @@ export default function reducer(state = initialState, action) {
 		// case UPDATE_USER:
 		// 	return { ...state, user: payload };
 		case `${LOGIN}_FULFILLED`:
-			console.log(action.payload.data.username);
+			// console.log(action.payload.data.username);
 			return {
 				...state,
-				username: payload.data.username[0],
-				image: payload.data.image, //??
+				username: payload.data.username,
+				image: payload.data.image,
 				showLogin: true,
 				redirect: true
 			};
@@ -100,13 +101,13 @@ export default function reducer(state = initialState, action) {
 			return {
 				...state,
 				showLogin: true,
-				username: payload.data.username[0],
+				username: payload.data.username,
 				redirect: true
 			};
 		case `${REGISTER}_FULFILLED`:
 			return {
 				...state,
-				username: payload.data.username[0],
+				username: payload.data.username,
 				image: payload.data.image, //??
 				showLogin: true,
 				redirect: true

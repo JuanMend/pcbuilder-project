@@ -52,6 +52,7 @@ class Register extends Component {
 							name="password"
 							onChange={this.handlerChange}
 							placeholder="Password"
+							type="password"
 						/>
 						<input
 							className={styles.registerImage}
@@ -62,6 +63,9 @@ class Register extends Component {
 						<button className={styles.registerBtn} onClick={this.handleRegister}>
 							Register
 						</button>
+						<h3>
+							Already a member?<Link to="/login">Sign In</Link> today
+						</h3>
 					</div>
 				</section>
 			</div>

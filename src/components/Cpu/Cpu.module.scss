@@ -8,15 +8,19 @@
 	align-items: center;
 	align-content: flex-start;
 	margin-top: 40px;
+	// border: 2px solid yellow;
+	height: 100vh;
 }
 
 .cpuForm {
 	-webkit-box-shadow: 9px 4px 6px 2px rgba(161, 161, 161, 0.75);
 	-moz-box-shadow: 9px 4px 6px 2px rgba(161, 161, 161, 0.75);
 	box-shadow: 9px 4px 6px 2px rgba(161, 161, 161, 0.75);
-	margin-top: 23px;
-	height: 30vh;
+	margin-top: 7vh;
+	height: 26vh;
+	// border: 2px solid rgb(231, 231, 231);
 }
+
 .cpuForm:hover {
 	transform: scale(1.04);
 }
@@ -67,12 +71,62 @@
 	}
 	.cpuForm {
 		border: 2px solid rgb(226, 226, 226);
+		// border: 2px solid red;
 		margin-bottom: 20px;
 		justify-content: center;
 		align-items: center;
 		display: flex;
 		flex-direction: column;
 		border-radius: 5px;
+		height: 35vh;
+	}
+	.info {
+		border-top: 2px solid rgb(223, 223, 220);
+		height: 13vh;
+		justify-content: space-between;
+		align-items: flex-end;
+		display: flex;
+	}
+
+	.productInfo {
+		width: 38vw;
+		height: 12vh;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		align-content: space-around;
+	}
+	.right {
+		justify-content: flex-end;
+		align-items: center;
+		display: flex;
+	}
+	.addShopping {
+		border-left: 2px solid rgb(223, 223, 220);
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		height: 12vh;
+		width: 24vw;
+	}
+}
+
+@media (max-width: 375px) {
+	.allCpuParts {
+		height: 160vh;
+	}
+	.cpuForm {
+		border: 2px solid rgb(226, 226, 226);
+		// border: 2px solid red;
+		margin-bottom: 20px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		border-radius: 5px;
+		height: 39vh;
 	}
 	.info {
 		border-top: 2px solid rgb(223, 223, 220);

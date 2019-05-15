@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { casePart } from '../../redux/pcParts';
+import { casePart, addCart } from '../../redux/pcParts';
 import { connect } from 'react-redux';
 import { getUser } from '../../redux/reducer';
 import styles from './Case.module.scss';
@@ -24,7 +24,9 @@ class Case extends Component {
 						</div>
 						<div className={styles.right}>
 							<div className={styles.addShopping}>
-								<i class="material-icons">add_shopping_cart</i>
+								<i onClick={() => this.props.addCart(val)} class="material-icons">
+									add_shopping_cart
+								</i>
 							</div>
 						</div>
 					</div>
@@ -40,4 +42,4 @@ const mapStateToProps = (state) => {
 		case: state.users.case
 	};
 };
-export default connect(mapStateToProps, { getUser, casePart })(Case);
+export default connect(mapStateToProps, { getUser, casePart, addCart })(Case);

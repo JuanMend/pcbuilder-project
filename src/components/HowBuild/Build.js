@@ -60,6 +60,24 @@ class Build extends Component {
 						allowfullscreen="allowfullscreen"
 					/>
 				</div>
+
+				<div className={styles.frame}>
+					<iframe
+						width="450"
+						height="315"
+						src="https://www.youtube.com/embed/hGiAfMoYEjI"
+						allowfullscreen="allowfullscreen"
+					/>
+				</div>
+
+				<div className={styles.frame}>
+					<iframe
+						width="450"
+						height="315"
+						src="https://www.youtube.com/embed/sjvzVJMYsDY"
+						allowfullscreen="allowfullscreen"
+					/>
+				</div>
 			</div>
 		);
 	}
