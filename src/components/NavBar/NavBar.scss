@@ -1,3 +1,11 @@
+a {
+	text-decoration: none;
+}
+.cartLength {
+	color: white;
+	// border-radius: 50%;
+	// border: solid red;
+}
 .menuNav {
 	justify-content: space-around;
 	align-items: center;
@@ -14,11 +22,13 @@
 	width: 60vw;
 }
 .bg-custom {
+	// height: 25vh;
 	background: rgb(0, 18, 66);
 }
 
 .navbar-toggler-icon {
 	background: white;
+	color: white;
 	border-radius: 3px;
 }
 
@@ -123,6 +133,7 @@
 }
 .navbar {
 	border-bottom: 2px solid white;
+	// height: 13vh;
 }
 // .logout {
 // 	font-size: 32px;
@@ -275,10 +286,10 @@
 @media (max-width: 414px) {
 	#navbarNav {
 		border-top: 2px solid white;
-		// border: 2px solid greenyellow;
 		// justify-content: center;
 		// display: flex;
 		// align-items: center;
+		// flex-direction: column;
 		height: 33vh;
 	}
 	.profileLink {
@@ -291,6 +302,9 @@
 	}
 	.navbar li {
 		// border: 2px solid red;
+		// font-size: 17px;
+		// width: 100%;
+		// height: 100%;
 		// justify-content: space-around;
 		// align-items: center;
 		// display: flex;

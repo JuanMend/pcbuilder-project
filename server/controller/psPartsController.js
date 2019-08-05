@@ -125,6 +125,11 @@ const getCart = async (req, res) => {
 	res.status(200).json(req.session.user.cart);
 };
 
+const clearCart = (req, res) => {
+	req.session.cart = [];
+	res.status(200).json(req.session.cart);
+};
+
 const deleteItems = (req, res) => {
 	const index = req.session.user.cart.findIndex((val) => val.id === +req.params.id);
 	console.log(index);
@@ -158,5 +163,6 @@ module.exports = {
 	deleteItems,
 	editProfile,
 	getPcCompleted,
-	postPcCompleted
+	postPcCompleted,
+	clearCart
 };

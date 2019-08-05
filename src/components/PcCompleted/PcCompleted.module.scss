@@ -1,24 +1,23 @@
 @import '../../Variable.scss';
 
-.completedForm {
-	// display: flex;
-	// flex-direction: row;
-	// flex-wrap: wrap;
-	// justify-content: space-around;
-	// align-items: center;
-	// align-content: space-around;
-	// margin-top: 40px;
-	// border-bottom: solid 1px white;
+@mixin border-radius($radius: 5px) {
+	border-radius: $radius;
+}
+
+@mixin flexbox ($align-items: center, $justify-content: center, $display: flex) {
+	align-items: $align-items;
+	justify-content: $justify-content;
+	display: $display;
 }
 
 .completedPcBtn {
+	@include border-radius;
 	width: 150px;
 	height: 40px;
-	border-radius: 5px;
 	font-size: 14px;
 	background: blue;
 	border: 1px solid transparent;
-	color: white;
+	color: $PC;
 }
 
 .completedPcBtn:hover {
@@ -36,15 +35,6 @@
 	border-bottom: solid 1px rgb(121, 120, 120);
 }
 
-// .pcCompleted {
-// 	display: flex;
-// 	flex-direction: column;
-// 	flex-wrap: nowrap;
-// 	justify-content: center;
-// 	align-items: stretch;
-// 	align-content: stretch;
-// 	border: 2px solid blue;
-// }
 .mappedForm {
 	display: flex;
 	flex-direction: column;
@@ -53,7 +43,7 @@
 	align-items: center;
 	align-content: stretch;
 	border: 2px solid rgb(228, 227, 227);
-	height: 30vh;
+	height: 32vh;
 	width: 16vw;
 	margin-bottom: 20px;
 }
@@ -102,9 +92,7 @@
 .completedPriceForm {
 	border-top: 2px solid gray;
 	width: 15vw;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+	@include flexbox;
 }
 
 @media (max-width: 414px) {
@@ -148,9 +136,7 @@
 	.completedPriceForm {
 		border-top: 2px solid gray;
 		width: 44vw;
-		justify-content: center;
-		align-items: center;
-		display: flex;
+		@include flexbox;
 	}
 }
 
@@ -200,8 +186,6 @@
 	.completedPriceForm {
 		border-top: 2px solid gray;
 		width: 44vw;
-		justify-content: center;
-		align-items: center;
-		display: flex;
+		@include flexbox;
 	}
 }

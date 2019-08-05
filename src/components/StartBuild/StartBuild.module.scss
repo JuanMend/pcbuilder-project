@@ -1,13 +1,7 @@
-// body {
-// 	background-size: cover;
-// 	background-image: url('../../pic/ogbg.png');
-// }
-
 @import '../../Variable.scss';
 
 .container {
 	position: relative;
-	// width: 50%;
 	justify-content: center;
 	align-items: center;
 	display: flex;
@@ -18,7 +12,7 @@
 	border-radius: 5px;
 }
 .container:hover {
-	transform: scale(1.1);
+	transform: scale(1.04);
 }
 
 .middle {
@@ -28,14 +22,9 @@
 	position: absolute;
 	transition: .5s ease;
 	opacity: 0;
-	// top: 50%;
-	// left: 50%;
-	// transform: translate(-50%, -50%);
-	// -ms-transform: translate(-50%, -50%);
-	// text-align: center;
 }
 .container:hover {
-	opacity: 0.7;
+	opacity: 0.8;
 }
 .container:hover .middle {
 	opacity: 8;
@@ -64,11 +53,10 @@
 	align-items: center;
 	align-content: space-around;
 	// border: 2px solid blue;
-	// padding: 300px;
 }
 .form {
 	// border: 2px solid red;
-	width: 50vw;
+	width: 60vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -129,6 +117,7 @@
 	// align-items: center;
 }
 .displayCpu {
+	// border: solid blue;
 	opacity: 1;
 	transition: .5s ease;
 	backface-visibility: hidden;
@@ -137,12 +126,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 40px;
 	background-position: center;
 	background-size: cover;
-	// background-image: url('https://img.purch.com/o/aHR0cDovL3d3dy5sYXB0b3BtYWcuY29tL2ltYWdlcy93cC9wdXJjaC1hcGkvaW5jb250ZW50LzIwMTYvMTIvc2h1dHRlcnN0b2NrXzQzNzIxMTIyOS02NzB4Mzc3LmpwZw==');
 }
 
 .displayMotherboard {
@@ -151,135 +139,95 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 35px;
 	background-position: center;
 	background-size: cover;
-	// background-image: url('https://assets.pcmag.com/media/images/534645-gigabyte-z390-aorus-xtreme-waterforce-motherboard.jpg');
 }
-
-// .displayMotherboard:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
 
 .displayMemory {
-	// background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUJVoHadccUwIUqbwdmdThDStNRM_eFTU6RXbMyMZULZyyN6ts');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 30px;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	border-radius: 5px;
 }
-// .displayMemory:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
-
 .displayStorage {
-	// background-image: url('https://www.scan.co.uk/images/3xs/infopages/storage-pc.png');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 30px;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	border-radius: 5px;
 }
-// .displayStorage:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
-
 .displayVideoCard {
-	// background-image: url('https://amp.businessinsider.com/images/57938d7add0895e1538b4a59-750-451.jpg');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 30px;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	border-radius: 5px;
 }
-
-// .displayVideoCard:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
 
 .displayCase {
-	// background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRemVmetivGwZDWJZsqm9E1jEARB8LQvqxGyGOKP2IEPKhffS7nVA');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 30px;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	border-radius: 5px;
 }
-// .displayCase:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
 
 .displayPowerSupply {
-	// background-image: url('http://images.bit-tech.net/content_images/2011/09/what-is-the-best-600w-psu/intro-1.jpg');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 30px;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	border-radius: 5px;
 }
-// .displayPowerSupply:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
 
 .displayMonitor {
-	// background-image: url('http://techfrag.com/wp-content/uploads/2016/02/ASUS-ROG-Swift-pg348q.jpg');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 30px;
 	background-position: center;
 	background-size: cover;
 	color: white;
 	border-radius: 5px;
 }
-// .displayMonitor:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
 
 .displayCpuCooler {
-	// background-image: url('https://eteknix-eteknixltd.netdna-ssl.com/wp-content/uploads/2017/09/msi-core-frozr-xl-1-800x630.jpg');
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 15vw;
-	height: 30vh;
+	width: 18vw;
+	height: 35vh;
 	font-size: 36px;
 	background-position: center;
 	background-size: cover;
@@ -289,10 +237,6 @@
 	transition: .5s ease;
 	backface-visibility: hidden;
 }
-// .displayCpuCooler:hover {
-// 	font-size: 30px;
-// 	color: white;
-// }
 
 // --------Iphone 6/7/8 plus-------------
 
@@ -306,16 +250,10 @@
 	}
 	.form {
 		width: 80vw;
-		// display: flex;
-		// flex-direction: column;
-		// flex-wrap: wrap;
-		// justify-content: space-around;
-		// align-items: center;
-		// align-content: space-around;
 		background: $PC;
 		height: 300vh;
 		border-radius: 5px;
-		// border: 1px solid red;
+		// border: solid blue;
 		margin-bottom: 20px;
 		justify-content: center;
 		align-items: center;
@@ -334,8 +272,9 @@
 		height: 300vh;
 	}
 	.displayCpu {
+		// border: solid red;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		font-size: 20px;
 		border-radius: 5px;
 	}
@@ -359,7 +298,7 @@
 	.displayCpuCooler {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 22px;
 		}
@@ -367,7 +306,7 @@
 	.displayMotherboard {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -384,7 +323,7 @@
 	.displayCase {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -392,7 +331,7 @@
 	.displayMonitor {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -401,7 +340,7 @@
 	.displayPowerSupply {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -410,7 +349,7 @@
 	.displayStorage {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -418,7 +357,7 @@
 	.displayVideoCard {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 50vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -430,12 +369,6 @@
 @media (max-width: 375px) {
 	.form {
 		width: 80vw;
-		// display: flex;
-		// flex-direction: column;
-		// flex-wrap: wrap;
-		// justify-content: space-around;
-		// align-items: center;
-		// align-content: space-around;
 		background: $PC;
 		height: 300vh;
 		border-radius: 5px;
@@ -459,7 +392,7 @@
 	}
 	.displayCpu {
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		font-size: 20px;
 		border-radius: 5px;
 	}
@@ -482,7 +415,7 @@
 	.displayCpuCooler {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 22px;
 		}
@@ -490,7 +423,7 @@
 	.displayMotherboard {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 25px;
 		}
@@ -499,7 +432,7 @@
 	.displayMemory {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -507,7 +440,7 @@
 	.displayCase {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -515,7 +448,7 @@
 	.displayMonitor {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -524,7 +457,7 @@
 	.displayPowerSupply {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 24px;
 		}
@@ -533,7 +466,7 @@
 	.displayStorage {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 30px;
 		}
@@ -541,7 +474,7 @@
 	.displayVideoCard {
 		border-radius: 5px;
 		height: 28vh;
-		width: 48vw;
+		width: 60vw;
 		h1 {
 			font-size: 30px;
 		}

@@ -12,35 +12,10 @@ class StartBuild extends Component {
 	}
 
 	render() {
-		// console.log(this.props);
-		// let post = this.props.cpu.map((val, index) => {
-		// 	return (
-		// 		<div>
-		// 			<h3>{val.cpu}</h3>
-		// 			<h3>{val.cores}</h3>
-		// 			<h4>{val.price}</h4>
-		// 			<img src={val.image} />
-		// 		</div>
-		// 	);
-		// });
 		return (
 			<div className={styles.partsMain}>
 				<div className={styles.form}>
 					<section>
-						{/* <div className={styles.pcForm}>
-							<Link to="/cpu">
-								<div className={styles.displayCpu}>
-									<h1>CPU</h1>
-								</div>
-							</Link> */}
-						{/* <div className={styles.bottomForm}>
-								<Link to="/cpu">
-									<button className={styles.addItem}>Choose A CPU</button>
-								</Link>
-							</div> */}
-
-						{/* </div> */}
-
 						<Link to="/cpu">
 							<div className={styles.container}>
 								<img

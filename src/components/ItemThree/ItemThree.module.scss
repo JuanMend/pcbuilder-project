@@ -1,0 +1,101 @@
+@import '../../Variable.scss';
+
+@mixin flexbox() {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+
+@mixin flexbox2() {
+	justify-content: space-around;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+}
+.insideArrItems {
+	width: 100%;
+	height: 100%;
+	@include flexbox;
+}
+
+.imageSide {
+	height: 50%;
+	width: 25%;
+	justify-content: flex-start;
+	align-items: center;
+	display: flex;
+	margin-right: 15vw;
+}
+.arrMapped {
+	height: 100vh;
+}
+
+.aboutTheItem {
+	@include flexbox2;
+	height: 50%;
+	width: 25%;
+	h3 {
+		height: 15%;
+		font-weight: 600;
+		font-size: 22px;
+		width: 100%;
+		border-bottom: 1px solid lightgray;
+	}
+	h4 {
+		height: 15%;
+		border-bottom: 1px solid lightgray;
+		width: 100%;
+		font-size: 22px;
+		font-weight: 600;
+	}
+}
+
+.addToCartBtn {
+	width: 24vw;
+	height: 5vh;
+	border-radius: 5px;
+	background: rgb(20, 59, 167);
+	color: $PC;
+}
+.addToCartBtn:hover {
+	background: rgb(8, 45, 148);
+}
+
+@media (max-width: 414px) {
+	.insideArrItems {
+		@include flexbox;
+		flex-direction: column;
+	}
+
+	.imageSide {
+		height: 40%;
+		width: 60%;
+		justify-content: flex-start;
+		align-items: center;
+		display: flex;
+		margin-right: 10px;
+	}
+	.arrMapped {
+		height: 100vh;
+	}
+
+	.aboutTheItem {
+		height: 30%;
+		width: 80%;
+		line-height: 30px;
+		h3 {
+			font-weight: 600;
+			font-size: 18px;
+		}
+		h4 {
+			font-size: 18px;
+			font-weight: 600;
+		}
+	}
+
+	.addToCartBtn {
+		width: 78vw;
+		background: rgb(20, 59, 167);
+		color: $PC;
+	}
+}

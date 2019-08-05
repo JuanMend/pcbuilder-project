@@ -1,0 +1,80 @@
+@import '../../Variable.scss';
+
+@mixin flexbox ($align-items: center,$display: flex,$justify-content: flex-end) {
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+}
+
+@mixin flexbox2 ($align-items: center,$display: flex,$justify-content: space-around) {
+	align-items: center;
+	display: flex;
+	justify-content: space-around;
+}
+
+.footerList {
+	// border: solid red;
+}
+
+.listLinks {
+	font-size: 15px;
+	width: 100%;
+	color: $PC;
+	line-height: 30px;
+	text-transform: uppercase;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+}
+
+.footerForm {
+	@include flexbox;
+	padding: 20px;
+	background: #001242;
+
+	height: 30vh;
+	// border: solid blue;
+}
+
+.contrList {
+	@include flexbox2;
+	// border: solid red;
+	width: 40%;
+}
+
+.email {
+	justify-content: center;
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	// border: solid red;
+	width: 40%;
+	height: 69%;
+	margin-right: 5vw;
+	line-height: 28px;
+	h1 {
+		color: $PC;
+	}
+}
+.emailInput {
+	outline: none;
+	width: 60%;
+	border: none;
+	background: transparent;
+	border-bottom: 1px solid $PC;
+	color: $PC;
+	font-size: 16px;
+}
+
+.imgFooter {
+	width: 120px;
+	height: 120px;
+}
+
+.imgDiv {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	// border: solid red;
+}

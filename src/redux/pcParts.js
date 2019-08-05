@@ -12,6 +12,7 @@ const initialState = {
 	monitor: [],
 	cart: [],
 	pcCompleted: [],
+	cartTotal: 0,
 	image: '',
 	description: '',
 	price: ''
@@ -33,14 +34,23 @@ const UPDATE_CART = 'UPDATE_CART';
 const DELETE_ITEM = 'DELETE_ITEM';
 const GET_PC_COMPLETED = 'GET_PC_COMPLETED';
 const POST_PC_COMPLETED = 'POST_PC_COMPLETED';
-// const EDIT_PROFILE = 'EDIT_PROFILE';
+const UPDATE_CART_TOTAL = 'UPDATE_CART_TOTAL';
+const CLEAR_CART = 'CLEAR_CART';
 
-// export function updateProfile(id, image) {
-// 	return {
-// 		type: EDIT_PROFILE,
-// 		payload: axios.put('/api/products', { id, image })
-// 	};
-// }
+export function clearCart() {
+	axios('api/clearcart');
+	return {
+		type: CLEAR_CART,
+		payload: []
+	};
+}
+
+export function updateCartTotal(total) {
+	return {
+		type: UPDATE_CART_TOTAL,
+		payload: total
+	};
+}
 
 export function getPcCompleted() {
 	return {
@@ -227,6 +237,19 @@ export default function users(state = initialState, action) {
 				description: payload.data[0].description,
 				price: payload.data[0].price
 			};
+
+		case UPDATE_CART_TOTAL:
+			return {
+				...state,
+				cartTotal: payload
+			};
+
+		case CLEAR_CART: {
+			return {
+				...state,
+				cart: payload
+			};
+		}
 
 		default:
 			return state;

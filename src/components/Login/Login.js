@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 import { updateLogin } from '../../redux/reducer';
 import { connect } from 'react-redux';
 import styles from './Login.module.scss';
