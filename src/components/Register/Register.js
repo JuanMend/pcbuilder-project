@@ -58,7 +58,7 @@ class Register extends Component {
 							className={styles.registerImage}
 							name="image"
 							onChange={this.handlerChange}
-							placeholder="Profile Image"
+							placeholder="Profile Image URL"
 						/>
 						<button className={styles.registerBtn} onClick={this.handleRegister}>
 							Register

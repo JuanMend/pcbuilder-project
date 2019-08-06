@@ -43,6 +43,7 @@ class Home extends Component {
 						<button className={styles.videosBtn}>Videos</button>
 					</Link>
 				</div>
+				{/* <div>Home</div> */}
 			</div>
 		);
 	}

@@ -4,6 +4,7 @@ import { logOut } from '../../redux/reducer';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import { getUser } from '../../redux/reducer';
+import { getCart } from '../../redux/pcParts';
 import './NavReset.scss';
 import './NavBar.scss';
 import logo from '../../pic/cd-logo.png';
@@ -19,6 +20,7 @@ class NavBar extends Component {
 
 	componentDidMoun() {
 		this.props.getUser();
+		this.props.getCart();
 	}
 
 	handlerClick = () => {
@@ -79,11 +81,15 @@ class NavBar extends Component {
 										Logout
 									</button>
 								</li>
-								<Link to="/cart">
-									<li>
-										<i class="fas fa-shopping-cart" />
-									</li>
-								</Link>
+
+								<li>
+									<Link to="/cart" style={{ textDecoration: 'none', color: 'black' }}>
+										<div className="cartLength">
+											<i class="fas fa-shopping-cart" />
+											{this.props.cart.length ? `(${this.props.cart.length})` : null}
+										</div>
+									</Link>
+								</li>
 							</ul>
 						</div>
 					</nav>
@@ -158,8 +164,9 @@ const mapStateToProps = (state) => {
 	return {
 		username: state.reducer.username,
 		image: state.reducer.image,
+		cart: state.users.cart,
 		reducer: state
 	};
 };
 
-export default connect(mapStateToProps, { logOut, getUser })(NavBar);
+export default connect(mapStateToProps, { logOut, getUser, getCart })(NavBar);

@@ -1,3 +1,14 @@
+@import '../../Variable.scss';
+
+@mixin flexbox ($align-items: center, $justify-content: center, $display: flex) {
+	align-items: $align-items;
+	justify-content: $justify-content;
+	display: $display;
+}
+@mixin border-radius($radius: 5px) {
+	border-radius: $radius;
+}
+
 .descForm {
 	// border: 2px solid blue;
 	height: 90vh;
@@ -11,9 +22,7 @@
 	// border: 2px solid red;
 	width: 30vw;
 	height: 90vh;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+	@include flexbox;
 	flex-direction: column;
 }
 
@@ -34,7 +43,7 @@
 	width: 50vw;
 	height: 45vh;
 	margin-left: 10vw;
-	border-radius: 5px;
+	@include border-radius;
 }
 .description {
 	border-right: 2px solid rgb(149, 149, 149);
@@ -52,9 +61,7 @@
 .postFormBtn {
 	border-left: 2px solid rgb(149, 149, 149);
 	height: 30vh;
-	justify-content: center;
-	align-items: center;
-	display: flex;
+	@include flexbox;
 	width: 100px;
 	margin-left: 50px;
 }
@@ -67,7 +74,7 @@
 	border: none;
 	background: blue;
 	border-radius: 5px;
-	color: white;
+	color: $PC;
 	margin-right: 5px;
 	margin-top: 5px;
 }
@@ -89,9 +96,7 @@ span {
 
 .infoForm {
 	// border: 2px solid yellow;
-	justify-content: center;
-	display: flex;
-	align-items: center;
+	@include flexbox;
 	height: 35vh;
 	flex-direction: column;
 	width: 28vw;
@@ -102,9 +107,9 @@ span {
 	width: 180px;
 	height: 40px;
 	border: 2px solid transparent;
-	border-radius: 5px;
 	background: blue;
-	color: white;
+	color: $PC;
+	@include border-radius;
 }
 
 .saveBtn:hover {
@@ -129,9 +134,7 @@ span {
 		// border: 2px solid rgb(204, 203, 203);
 		border: 2px solid rgb(231, 228, 228);
 		height: 33vh;
-		justify-content: flex-start;
-		align-items: center;
-		display: flex;
+		@include flexbox;
 		margin-top: 20px;
 		margin-right: 35px;
 		flex-direction: column;
@@ -144,9 +147,7 @@ span {
 		// border: 1px solid green;
 	}
 	.descForm {
-		justify-content: center;
-		align-items: center;
-		display: flex;
+		@include flexbox;
 		flex-direction: column;
 		height: 140vh;
 	}
@@ -177,12 +178,9 @@ span {
 		width: 110px;
 	}
 	.desktopForm {
-		// border: 2px solid yellow;
-		border-radius: 5px;
+		@include border-radius;
 		width: 90vw;
-		justify-content: center;
-		align-items: center;
-		display: flex;
+		@include flexbox;
 		flex-direction: column;
 		height: 60vh;
 		margin-top: 10px;
@@ -197,10 +195,8 @@ span {
 		justify-content: center;
 		align-items: center;
 		display: flex;
-		// border: 2px solid green;
 		width: 80vw;
 		height: 30vh;
-		// flex-direction: column;
 	}
 	.typeFile {
 		// border: 2px solid blue;
@@ -213,9 +209,9 @@ span {
 		margin-left: 60px;
 	}
 	.uploadBtn {
+		@include border-radius;
 		background: blue;
-		color: white;
-		border-radius: 5px;
+		color: $PC;
 		height: 4vh;
 		border: 2px solid green;
 	}

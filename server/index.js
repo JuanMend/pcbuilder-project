@@ -33,7 +33,8 @@ const {
 	deleteItems,
 	editProfile,
 	getPcCompleted,
-	postPcCompleted
+	postPcCompleted,
+	clearCart
 } = require('./controller/psPartsController');
 app.use(express.json());
 app.use(cors());
@@ -74,6 +75,7 @@ app.get('/api/case', getCase);
 app.get('/api/powersupply', getPowerSupply);
 app.get('/api/monitor', getMonitor);
 
+app.get('/api/clearcart', clearCart);
 app.get('/api/products', getCart);
 app.get('/api/product', getPcCompleted);
 app.post('/api/product', postPcCompleted);

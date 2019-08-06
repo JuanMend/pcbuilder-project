@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import Checkout from '../Checkout/Checkout';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { getUser } from '../../redux/reducer';
-import { getCart, deleteItem } from '../../redux/pcParts';
+import { getCart, deleteItem, updateCartTotal, clearCart } from '../../redux/pcParts';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import StripeCheckout from 'react-stripe-checkout';
@@ -29,57 +31,76 @@ class Cart extends Component {
 	};
 
 	render() {
-		console.log(this.props.showLogin);
+		let total = this.props.cart.map((val) => parseFloat(val.price)).reduce((prev, next) => prev + next, 0);
+		this.props.updateCartTotal(total);
 		let mappedItems = this.props.cart.map((val, index) => {
 			return (
 				<div key={val.id} className={styles.cpuForm}>
-					<div className={styles.buttons}>
-						<button onClick={() => this.props.deleteItem(val.id)} className={styles.deleteBtn}>
-							X
-						</button>
-					</div>
-					<img className={styles.pcImage} src={val.image} />
-					<div className={styles.info}>
-						<div className={styles.productInfo}>
-							<h3>{val.power_supply}</h3>
-							<h3>{val.storage}</h3>
-							<h3>{val.video_card}</h3>
-							<h3>{val.case}</h3>
-							<h3> {val.cpu_cooler}</h3>
-							<h3> {val.cpu}</h3>
-							<h3> {val.motherboard}</h3>
-							<h3> {val.memory}</h3>
-							<h3> {val.monitor}</h3>
-							<h3> {val.resolution}</h3>
-							<h3> {val.size}</h3>
-							<h3> {val.cores}</h3>
-							<h3> {val.fan_rpm}</h3>
-							<h3> {val.socket_cpu}</h3>
-							<h3>{val.type}</h3>
-							<h3>{val.capacity}</h3>
-							<h3>{val.memory_size}</h3>
-							<h3>{val.form_factor}</h3>
-							<h3> {val.speed}</h3>
-							<h4>${val.price}.00</h4>
+					<ul className={styles.cartListOfProd}>
+						<li>
+							<img className={styles.pcImage} src={val.image} />
+						</li>
+						<div className={styles.insideArrItemsList}>
+							<li className={styles.priceOne}>${val.price}.00</li>
+							<li>{val.power_supply}</li>
+							<li>{val.storage}</li>
+							<li>{val.video_card}</li>
+							<li>{val.case}</li>
+							<li> {val.cpu_cooler}</li>
+							<li> {val.cpu}</li>
+							<li> {val.motherboard}</li>
+							<li> {val.memory}</li>
+							<li> {val.monitor}</li>
+							<li>${val.price}.00</li>
+							<li>
+								<div className={styles.buttons}>
+									<button onClick={() => this.props.deleteItem(val.id)} className={styles.deleteBtn}>
+										X
+									</button>
+								</div>
+							</li>
 						</div>
-						<div className={styles.right}>
-							{/* <button className={styles.buyBtn}>Buy</button> */}
-							<StripeCheckout
-								stripeKey="pk_test_TKV642wQmuy9l9PF2zocAW0I00obBGU8vC"
-								token={this.handleToken}
-								amount={val.price * 100}
-								name={val.cpu}
-							/>
-						</div>
-					</div>
+					</ul>
 				</div>
 			);
 		});
+
 		return (
-			<div className={styles.mainForm}>
-				{/* {!this.props.showLogin && <Redirect to="/login" />} */}
-				{mappedItems}
-				{/* {Items} */}
+			<div>
+				{this.props.cart[0] ? (
+					<div className={styles.mainForm}>
+						<ul className={styles.listCartProd}>
+							<li>Product</li>
+							<li>Price</li>
+							<li>Name</li>
+							<li>Total</li>
+							<li>Delete</li>
+						</ul>
+						<div className={styles.orderTotal}>
+							Order Total: ${total ? parseFloat(total.toFixed(2)) : null}.00
+							<div className={styles.forCheckout}>
+								<Checkout name={'CyberDigital'} amount={this.props.updateCartTotal} />
+							</div>
+						</div>
+
+						{mappedItems}
+					</div>
+				) : (
+					<div className={styles.noItems}>
+						<div className={styles.emptyCart}>
+							<h2>Your Cart is Empty!</h2>
+						</div>
+						<div className={styles.noItemsTwo}>
+							<img
+								className={styles.emptyCartImg}
+								src="http://www.simsonpharma.com/assets/frontend/images/empty-card.png"
+							/>
+							<Link to="/startbuild">
+								<button className={styles.cartShopBtn}>Shop Now</button>
+							</Link>
+						</div>
+					</div>
+				)}
 			</div>
 		);
 	}
@@ -87,9 +108,11 @@ class Cart extends Component {
 
 const mapStateToProps = (state) => {
 	return {
+		username: state.reducer.username,
 		cart: state.users.cart,
-		showLogin: state.reducer.showLogin
+		showLogin: state.reducer.showLogin,
+		cartTotal: state.users.cartTotal
 	};
 };
 
-export default connect(mapStateToProps, { getUser, getCart, deleteItem })(Cart);
+export default connect(mapStateToProps, { getUser, getCart, deleteItem, updateCartTotal, clearCart })(Cart);
