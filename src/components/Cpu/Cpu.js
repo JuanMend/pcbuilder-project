@@ -39,7 +39,6 @@ class Cpu extends Component {
 const mapStateToProps = (state) => {
 	return {
 		cpu: state.users.cpu
-		// cart: state.users.cart
 	};
 };
 export default connect(mapStateToProps, { getUser, cpuPart })(Cpu);

@@ -110,73 +110,9 @@ const mapStateToProps = (state) => {
 	return {
 		username: state.reducer.username,
 		cart: state.users.cart,
-		// cart: state.reducer.cart,
 		showLogin: state.reducer.showLogin,
 		cartTotal: state.users.cartTotal
 	};
 };
 
 export default connect(mapStateToProps, { getUser, getCart, deleteItem, updateCartTotal, clearCart })(Cart);
-
-{
-	/* <img className={styles.pcImage} src={val.image} />
-					<div className={styles.info}>
-						<div className={styles.productInfo}>
-							<h3>{val.power_supply}</h3>
-							<h3>{val.storage}</h3>
-							<h3>{val.video_card}</h3>
-							<h3>{val.case}</h3>
-							<h3> {val.cpu_cooler}</h3>
-							<h3> {val.cpu}</h3>
-							<h3> {val.motherboard}</h3>
-							<h3> {val.memory}</h3>
-							<h3> {val.monitor}</h3>
-							<h4>${val.price}.00</h4>
-							<div className={styles.buttons}>
-								<button onClick={() => this.props.deleteItem(val.id)} className={styles.deleteBtn}>
-									X
-								</button>
-							</div>
-						</div> */
-}
-
-// if (this.props.cart.length > 0) {
-// 	let total = this.props.cart.map((item) => parseFloat(item.price)).reduce((prev, next) => prev + next, 0);
-// 	this.props.updateCartTotal(total);
-
-// 	let mappedItems = this.props.cart.map((val, index) => {
-// 		return (
-// 			<div key={val.id} className={styles.cpuForm}>
-// 				<ul className={styles.cartListOfProd}>
-// 					<li>
-// 						<img className={styles.pcImage} src={val.image} />
-// 					</li>
-// 					<div className={styles.insideArrItemsList}>
-// 						<li className={styles.priceOne}>${val.price}.00</li>
-// 						<li>{val.power_supply}</li>
-// 						<li>{val.storage}</li>
-// 						<li>{val.video_card}</li>
-// 						<li>{val.case}</li>
-// 						<li> {val.cpu_cooler}</li>
-// 						<li> {val.cpu}</li>
-// 						<li> {val.motherboard}</li>
-// 						<li> {val.memory}</li>
-
-// 						<li> {val.monitor}</li>
-// 						<li>${val.price}.00</li>
-// 						<li>
-// 							<div className={styles.buttons}>
-// 								<button
-// 									onClick={() => this.props.deleteItem(val.id)}
-// 									className={styles.deleteBtn}
-// 								>
-// 									X
-// 								</button>
-// 							</div>
-// 						</li>
-// 					</div>
-// 				</ul>
-// 			</div>
-// 		);
-// 	});
-// }
